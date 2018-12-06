@@ -1,5 +1,5 @@
 # Dockerfile for Mission IO Development stack
-# Docker, Git, Node, NPM, rimraf, mission.cli
+# Docker, Git, Node, NPM, rimraf, typescript, tslint, mission.cli
 
 FROM docker:latest
 
@@ -8,4 +8,4 @@ RUN apk update \\
     && apk add npm --no-cache && node -v \\
     && apk add git --no-cache && git version 
 
-RUN npm install mission.cli rimraf -g --ignore-scripts && mio version
+RUN npm install mission.cli rimraf typescript tslint -g --ignore-scripts && mio version
