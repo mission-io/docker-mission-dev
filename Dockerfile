@@ -8,4 +8,4 @@ RUN apk update \\
     && apk add npm --no-cache && node -v \\
     && apk add git --no-cache && git version 
 
-RUN npm install mission.cli rimraf typescript tslint -g --ignore-scripts && mio version
+RUN npm install mission.cli rimraf typescript tslint mission.shrink -g --ignore-scripts && mio version
